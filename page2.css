@@ -1,0 +1,297 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; 
+    height: 100vh; 
+    padding-bottom: 0;
+
+}
+
+#navbar {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    background-image: linear-gradient(to left, teal, lightblue);
+    z-index: 1000; 
+    
+}
+
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /
+}
+#top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em;
+}
+.title_container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    text-align: center;
+    margin-left: 0vw;
+    width: 100vw; 
+}
+
+
+#title {
+    flex-grow: 0; 
+    padding-left: 0; 
+    scale: 1.5;
+}
+
+
+#bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-around; 
+    align-items: center; 
+    max-width: calc(100% - 200px); 
+    box-sizing: border-box;
+}
+
+#bottom-nav ul li {
+    padding: 0.5em 1em;
+}
+
+#bottom-nav ul li a {
+    text-decoration: none;
+    color: #1d1818;
+    font-size: 16px;
+    font-weight: bold;
+    opacity: 1;
+    transition: opacity 100ms ease;
+}
+
+
+#bottom-nav ul li a:hover{
+opacity: 0.75;
+color: #1d1818;
+
+}
+
+
+#logo {
+    position: absolute;
+    top: 82.5%; 
+    left: 3%; 
+    transform: translateY(-50%); 
+    height: 80px; 
+    z-index: 5; 
+}
+
+.review-heading {
+    padding-top: 40px; /* Adjust this value so the title doesn't overlap the navbar */
+    padding-left: 30px;
+    background-color: #FFFFFF; /* Assuming a white background */
+
+}
+.styled_review_hr{
+    width: auto;
+    height: 3px;
+    background-color: #000; 
+    margin-top: 0.5em; 
+    margin-bottom: 1em; 
+}
+
+a{
+    text-decoration: none;
+}
+
+.reviews{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+
+}
+
+.review-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    
+
+}
+
+.review-box{
+    width: 500px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid #77ABB7;;
+    
+    
+}
+
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.profile-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+}
+
+.name{
+    display: flex;
+    flex-direction: column;
+}
+
+.name strong{
+    color: #3d3d3d;
+    font-size: 1.1rem;
+    letter-spacing: 0,5px;
+}
+
+.name span{
+    color: #979797;
+    font-size: 0.8rem;
+}
+
+.review{
+    color: #f9d71c;
+
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.client-review p{
+    font-size: 0.9rem;
+    color: #4b4b4b;
+}
+
+.review-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s;
+}
+
+.faq-section {
+    padding: 20px;
+    background-image: linear-gradient(to bottom left, #EE99C2,#FFE3CA ); 
+}
+.faq-section h1{
+    text-align: center;
+}
+.styled_faqs_hr{
+    width: 50%;
+    height: 3px;
+    background-color: #000; 
+    margin-top: 0.5em; 
+    margin-bottom: 1em; 
+}
+
+.faq-container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center the container */
+}
+
+.faq-item {
+    background-color: white; /* Background color for each item */
+    margin-bottom: 10px; /* Space between items */
+    border: 1px solid #dcdcdc; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.faq-item summary {
+    padding: 15px;
+    color: #333; /* Text color for the summary */
+    font-weight: bold; /* Make the summary text bold */
+    cursor: pointer; /* Change cursor to indicate it's clickable */
+    outline: none; /* Remove the default focus outline */
+    list-style: none; /* Remove the default marker */
+}
+
+.faq-item summary::-webkit-details-marker { /* Hide the arrow icon for webkit browsers */
+    display: none;
+}
+
+.faq-item p {
+    text-align: justify;
+    padding: 0 15px 15px;
+    margin: 0; /* Reset default margin for paragraphs */
+    color: #666; /* Text color for the content */
+    line-height: 1.6; /* Line height for readability */
+    border-top: 1px solid #dcdcdc; /* Line between summary and content */
+}
+
+/* Style for the plus icon */
+.faq-item summary::before {
+    content: "+";
+    font-size: 1.5em;
+    color: teal; /* Color of the plus icon */
+    padding-right: 8px; /* Space between the plus icon and text */
+    font-weight: bold; /* Make the plus icon bold */
+}
+
+
+.faq-item[open] summary::before {
+    content: "-";
+}
+
+details {
+    transition: height 0.4s ease;
+}
+
+.site-footer {
+    width: calc(200vw-10px);
+    height: auto;
+    padding: 10px;
+    background-image: linear-gradient(to left, teal, lightblue);
+    color: #000;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .faq-container {
+        width: 95%;
+        padding: 0 5%;
+    }
+
+    .faq-item summary {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .faq-item p {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
